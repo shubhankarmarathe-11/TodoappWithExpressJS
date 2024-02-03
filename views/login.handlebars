@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/form.css">
+    <title>Login</title>
+</head>
+
+<body>
+
+    {{#if loginmsg}}
+        <div class="data">
+            <b>{{loginmsg}}</b>
+        </div>
+    {{/if}}
+
+    <form action="/login" method="post">
+        <div class="form">
+            <h2>Login Now</h2>
+            <input type="text" name="username" id="" placeholder="Create Your Username" required>
+            {{!-- <input type="email" name="email" id="" placeholder="Enter Your Email"> --}}
+            <input type="password" name="password" id="" placeholder="Enter Your Password" required>
+            <button type="submit">Login Now</button>
+        </div>
+    </form>
+</body>
+
+</html>

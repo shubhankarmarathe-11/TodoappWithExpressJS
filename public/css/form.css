@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* border: 1px solid black; */
+    margin: 50px 0px;
+}
+.form {
+    display: flex;
+    background: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%);
+    flex-direction: column;
+    border: 1px solid black;
+    width: 50%;
+    height: 70vh;
+    padding: 15px 0px;
+    border-radius:15px ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-items: center;
+    justify-content: center;
+}
+form h2{
+    margin: 10px auto;
+}
+form input{
+    width: 50%;
+    margin: 15px auto;
+    padding: 10px 10px;
+}
+
+form button{
+    cursor: pointer;
+    width: 20%;
+    padding: 10px 0px;
+    margin: 15px auto;
+}
+
+@media screen and (max-width:975px) and (min-width:750px){
+    form button{
+        width: 25%;
+    }
+}
+
+@media screen and (max-width:750px) and (min-width:600px){
+    form button{
+        width: 35%;
+    }
+}
+
+@media screen and (max-width:600px) and (min-width:300px){
+    form button{
+        width: 55%;
+    }
+    .form{
+        width: 70%;
+    }
+    form input{
+        width: 65%;
+    }
+}
+@media screen and (max-width:300px) and (min-width:200px){
+    form button{
+        width: 55%;
+    }
+    .form{
+        width: 85%;
+    }
+    form input{
+        width: 65%;
+    }
+}

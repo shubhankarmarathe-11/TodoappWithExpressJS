@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    {{#if todoflash}}
+        <div class="data">
+            <b>{{todoflash}}</b>
+        </div>
+    {{/if}}
+    <header>
+        
+        <ul>
+            <li><a>Todo List</a></li>
+            {{!-- <li><a href="">Products</a></li> --}}
+            <li><a>Contact Us</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+
+    </header>
+
+    <div class="container">
+        <form action="/users/{{username}}" method="post">
+            <input type="text" name="todo" id="" placeholder="Add Todos" required>
+            <input type="time" name="time" id="" placeholder="Set Time" required>
+            <button>Add Todo</button>
+        </form>
+
+        <table>
+            <tr>
+                <th id="sr">#</th>
+                <th id="title">Todo Title</th>
+                <th id="tatus">Status</th>
+            </tr>
+            {{#each data2}}
+            <tr>
+                <td>{{@index}}</td>
+                <td>{{todostatement}}</td>
+                <td><a href="/{{username}}/complete/{{todostatement}}"><button id="btn" type="submit">Complete</button></a></td>
+            </tr>
+            {{/each}}
+        </table>
+
+    </div>
+
+</body>
+
+</html>
